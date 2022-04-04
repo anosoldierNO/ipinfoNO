@@ -5,7 +5,7 @@ from colorama import Fore, Back, Style
 import os
 
 def check(syA1):
-    print ( "\n" + Fore.YELLOW + "[*] Running Reputation Check Against"+ " ", syA1 + "\n")
+    print ( "\n" + Fore.YELLOW + "[*] Kjører omdømmesjekk mot"+ " ", syA1 + "\n")
 
     url = 'https://api.abuseipdb.com/api/v2/check'
 
@@ -24,23 +24,23 @@ def check(syA1):
     # Formatted output
     decodedResponse = json.loads(response.text)
     print ( Fore.WHITE + "Domain: " + json.dumps(decodedResponse ["data"]["domain"]))
-    print ( "Hostname: " + json.dumps(decodedResponse ["data"]["hostnames"]))
-    print ( "Usage Type: " + json.dumps(decodedResponse ["data"]["usageType"]))
-    print ( "Confidence of Abuse: " + json.dumps(decodedResponse ["data"]["abuseConfidenceScore"]))
-    print ( "Number Times of Reported: " + json.dumps(decodedResponse ["data"]["totalReports"]))
-    print ( "Last Reported: " + json.dumps(decodedResponse ["data"]["lastReportedAt"]))
-    print ( "Whitelisted: " + json.dumps(decodedResponse ["data"]["isWhitelisted"]) + "\n")
+    print ( "Hostnavn: " + json.dumps(decodedResponse ["data"]["hostnames"]))
+    print ( "Type: " + json.dumps(decodedResponse ["data"]["usageType"]))
+    print ( "Tillit til misbruk: " + json.dumps(decodedResponse ["data"]["abuseConfidenceScore"]))
+    print ( "Antall rapporterte ganger: " + json.dumps(decodedResponse ["data"]["totalReports"]))
+    print ( "Sist rapportert " + json.dumps(decodedResponse ["data"]["lastReportedAt"]))
+    print ( "Hvitelistet: " + json.dumps(decodedResponse ["data"]["isWhitelisted"]) + "\n")
 
     #This conditional statement outputs the status of the ip address based on abuse of confidence
     if json.dumps(decodedResponse ["data"]["abuseConfidenceScore"]) == "100":
-        print ( Fore.YELLOW + "The IP Address " + sys.argv[1] + " Is Malicious and well known for SSH Bruteforce Attacks" + "\n")
+        print ( Fore.YELLOW + "IP Addressen " + sys.argv[1] + " Er ondsinnet og kjent for SSH Bruteforce Angrep" + "\n")
     elif json.dumps(decodedResponse ["data"]["abuseConfidenceScore"]) == "0":
-        print ( Fore.GREEN + "The IP Address " + sys.argv[1] + " Is Not Malicious" + "\n")
+        print ( Fore.GREEN + "IP Addressen " + sys.argv[1] + " Er ikke ondsinnet" + "\n")
     elif json.dumps(decodedResponse ["data"]["abuseConfidenceScore"]) < "20":
-        print ( "The IP Address " + sys.argv[1] + " Is Probably Not Malicious But Should Be Investigated Further")
+        print ( "IP Addressen " + sys.argv[1] + " Er sannsynligvis ikke ondsinnet, men bør undersøkes nærmere")
     elif json.dumps(decodedResponse ["data"]["abuseConfidenceScore"]) <= "20":
-        print ( "The IP Address " + sys.argv[1] + " Is Probably Malicious And Should Be Investigated Further")
+        print ( "IP Adressen " + sys.argv[1] + " Er sannsynligvis ondsinnet og bør undersøkes nærmere")
     else:
-        print ( "[*] IP Reputation Look up Complete!!!" + "\n" )
+        print ( "[*] IP-omdømmeoppslag fullført!!!" + "\n" )
 
-    print ( Fore.GREEN + "[*] IP Reputation Look up Complete!!!" + "\n" )
+    print ( Fore.GREEN + "[*] IP-omdømmeoppslag fullført!!!" + "\n" )

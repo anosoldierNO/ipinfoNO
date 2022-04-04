@@ -4,7 +4,7 @@ if [ "$?" = "0" ]; then
     exit 1
 
 else
-    echo Is necessary to install Nmap, instaling...
+    echo Det nødvendig å installere Nmap, installerer...
     sudo apt install nmap -y > /dev/null 2>&1
 
 fi

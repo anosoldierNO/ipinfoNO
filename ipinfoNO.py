@@ -4,6 +4,8 @@ if sys.version_info<(3,0):
    sys.stderr.write("Please update and make sure you use the command python3 ipinfoNO.py <IP NUMBER> <COMMAND>\n\n")
    sys.exit(0)
 
+# Importer nødvendige tillegg
+
 import requests
 import json
 from colorama import Fore, Back, Style
@@ -20,12 +22,12 @@ from modules.myip import myIp
 syA = sys.argv
 
 def zero(syA):
-   #Verify for argumements and IPs, if not it will read the banner and will close
+   #Bekreft for argumenter og IP-er, hvis ikke vil den lese banneret og lukkes
    if (len(sys.argv) == 1):
       welcome()
       sys.exit(0)
    else:
-      #Verify if the user has nmap, if not it will install automatic
+      #Bekreft om brukeren har nmap, hvis ikke vil den installeres automatisk
       verify()
 
 zero(syA)
@@ -34,7 +36,7 @@ zero(syA)
 
 
 
-#Test for use and execute
+#Test for bruk og kjør
 
 if (len(sys.argv) > 1):
    syA1 = sys.argv[1]
@@ -64,7 +66,7 @@ if (len(sys.argv) > 1):
    else:
       os.system('clear')
       welcome()
-      print(Fore.WHITE + '\n Wait a minute....')
+      print(Fore.WHITE + '\n Et øyeblikk....')
       getGeo(syA1)
       check(syA1)
 

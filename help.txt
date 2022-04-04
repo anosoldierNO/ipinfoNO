@@ -1,32 +1,28 @@
-# Geo-Recon
-An OSINT CLI tool desgined to fast track IP Reputation and Geo-locaton look up for Security Analysts.
+# ipinfoNO
+Et OSINT CLI vedktøy for å vise utvidet informasjon på IP adressen.
 
-# Setup
-This tool is compactible with:
-* Any Linux Operating System (Debian, Ubuntu, CentOS)
-* Termux
 
-# Linux Install Requeriments
+# Linux Installer requeriments.txt
 
-pip3 install -r requirements.txt  #You also can use the pip3
+pip3 install -r requirements.txt
 
-# Sample Simple Syntax Linux
+# Eksempel på enkel Syntax Linux
 
 root@kali:~/geo-recon# python3 geo-recon.py 123.456.789.10
-or
+eller
 root@kali:~/geo-recon# python3 geo-recon.py 123.456.789.10 -n
 
 
-# Commands
+# Kommandoer
 
-python3 geo-recon.py --help or -h                         (Display this)
+python3 ipinfoNO.py --help eller -h                         (Vis dette)
 
-python3 geo-recon.py 123.456.789.10 --nmap or -n          (Nmap standard use)
+python3 ipinfoNO.py 123.456.789.10 --nmap eller -n          (Nmap standard)
 
-python3 geo-recon.py 123.456.789.10                       (Standard use, info about IP)
+python3 ipinfoNO.py 123.456.789.10                       (Standard, informasjon om IP)
 
-python3 geo-recon.py --commands or -c                     (Display avaliable commands)
+python3 ipinfoNO.py --commands eller -c                     (Vis tilgjengelige kommandoer)
 
-python3 geo-recon.py localhost                            (Standard use, info about YOUR IP address)
+python3 ipinfoNO.py localhost                            (Standard, informasjon om din IP adresse)
 
-python3 geo-recon.py localhost -n or --nmap               (Standard use, info about YOUR IP address with Nmap log)
+python3 ipinfoNO.py localhost -n or --nmap               (Standard, informasjon om din IP adresse med NMAP log)
