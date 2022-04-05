@@ -1,10 +1,9 @@
-                           IPINFO NORSK VERSJON
+IPINFO NORSK VERSJON
+***********
+               
+Standard bruk: python3 ipinfoNO.py <IPADDRESSE> <ALTERNATIV
+            
+Bruk python3 ipinfoNO.py -h for å se alternativer 
 
-                              '''''''''''''''
-               Basert på GEO RECON av d3xt3r_182, @Hautly_idk
-
-            Standard bruk: python3 geo-recon.py <IPADDRESS> <OPTION>
-            
-               Bruk python3 ipinfoNO.py -h too see the options
-            
-            
+Av anosoldierNO
+Basert på GEO RECON av d3xt3r_182, @Hautly_idk

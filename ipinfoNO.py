@@ -1,12 +1,10 @@
-
+# Importer nødvendige tillegg
 
 import sys
 if sys.version_info<(3,0):
    sys.stderr.write("\nYou need python 3.0 or later to run this script\n")
    sys.stderr.write("Please update and make sure you use the command python3 ipinfoNO.py <IP NUMBER> <COMMAND>\n\n")
    sys.exit(0)
-
-# Importer nødvendige tillegg
 
 import requests
 import json

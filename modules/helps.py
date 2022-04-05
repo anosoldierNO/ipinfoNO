@@ -7,5 +7,3 @@ def help(syA1):
         print(Fore.WHITE)
         f = open("help.txt")
         print (f.read())
-
-

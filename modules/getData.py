@@ -17,4 +17,4 @@ def getGeo(syA1):
     print ( "Lengdegrad: ", response["lon"])
     print ( "Breddegrad: ", response["lat"])
     print ( "ISP: "+ response["isp"] + "\n") 
-    print ( Fore.GREEN + "[*] Geo-IP Søk Fullført!!!" + "\n")
+    print ( Fore.GREEN + "[*] IP Søk Fullført!cd Programmering" + "\n")

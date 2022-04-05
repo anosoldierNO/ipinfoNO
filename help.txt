@@ -8,20 +8,20 @@ pip3 install -r requirements.txt
 
 # Eksempel på enkel Syntax Linux
 
-root@kali:~/geo-recon# python3 geo-recon.py 123.456.789.10
+root@kali:~/ipinfoNO# python3 ipinfoNO.py 123.456.789.10
 eller
-root@kali:~/geo-recon# python3 geo-recon.py 123.456.789.10 -n
+root@kali:~/ipinfoNO# python3 ipinfoNO.py 123.456.789.10 -n
 
 
 # Kommandoer
 
-python3 ipinfoNO.py --help eller -h                         (Vis dette)
+python3 ipinfoNO.py --help eller -h                      (Vis dette)
 
-python3 ipinfoNO.py 123.456.789.10 --nmap eller -n          (Nmap standard)
+python3 ipinfoNO.py 123.456.789.10 --nmap eller -n       (Nmap standard)
 
 python3 ipinfoNO.py 123.456.789.10                       (Standard, informasjon om IP)
 
-python3 ipinfoNO.py --commands eller -c                     (Vis tilgjengelige kommandoer)
+python3 ipinfoNO.py --commands eller -c                  (Vis tilgjengelige kommandoer)
 
 python3 ipinfoNO.py localhost                            (Standard, informasjon om din IP adresse)
 
