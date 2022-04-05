@@ -1,3 +1,5 @@
+
+
 import sys
 if sys.version_info<(3,0):
    sys.stderr.write("\nYou need python 3.0 or later to run this script\n")
@@ -22,7 +24,7 @@ from modules.myip import myIp
 syA = sys.argv
 
 def zero(syA):
-   #Bekreft for argumenter og IP-er, hvis ikke vil den lese banneret og lukkes
+   #Bekreft for argumenter og IP-er, hvis ikke vil den lukkes
    if (len(sys.argv) == 1):
       welcome()
       sys.exit(0)
@@ -32,16 +34,12 @@ def zero(syA):
 
 zero(syA)
 
-
-
-
-
 #Test for bruk og kjør
 
 if (len(sys.argv) > 1):
    syA1 = sys.argv[1]
    if sys.argv[1].startswith('-'):
-         if syA1 == "--help" or syA1 == '-h':
+         if syA1 == "--help" or syA1 == '-h': 
             os.system('clear')
             welcome()
             help(syA1)
@@ -62,7 +60,6 @@ if (len(sys.argv) > 1):
       getGeo(syA1)
       check(syA1)
 
-
    else:
       os.system('clear')
       welcome()
@@ -70,19 +67,7 @@ if (len(sys.argv) > 1):
       getGeo(syA1)
       check(syA1)
 
-   
-
 if (len(sys.argv) > 2):
    syA1 = sys.argv[1]
    syA2 = sys.argv[2]
    command(syA2, syA1)
-
-
-
-
-
-
-
-
-
-         

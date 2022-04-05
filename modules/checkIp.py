@@ -24,7 +24,7 @@ def check(syA1):
     # Formatted output
     decodedResponse = json.loads(response.text)
     print ( Fore.WHITE + "Domain: " + json.dumps(decodedResponse ["data"]["domain"]))
-    print ( "Hostnavn: " + json.dumps(decodedResponse ["data"]["hostnames"]))
+    print ( "Vert: " + json.dumps(decodedResponse ["data"]["hostnames"]))
     print ( "Type: " + json.dumps(decodedResponse ["data"]["usageType"]))
     print ( "Tillit til misbruk: " + json.dumps(decodedResponse ["data"]["abuseConfidenceScore"]))
     print ( "Antall rapporterte ganger: " + json.dumps(decodedResponse ["data"]["totalReports"]))
@@ -36,11 +36,11 @@ def check(syA1):
         print ( Fore.YELLOW + "IP Addressen " + sys.argv[1] + " Er ondsinnet og kjent for SSH Bruteforce Angrep" + "\n")
     elif json.dumps(decodedResponse ["data"]["abuseConfidenceScore"]) == "0":
         print ( Fore.GREEN + "IP Addressen " + sys.argv[1] + " Er ikke ondsinnet" + "\n")
-    elif json.dumps(decodedResponse ["data"]["abuseConfidenceScore"]) < "20":
+    elif json.dumps(decodedResponse ["data"]["abuseConfidenceScore"]) < "30":
         print ( "IP Addressen " + sys.argv[1] + " Er sannsynligvis ikke ondsinnet, men bør undersøkes nærmere")
-    elif json.dumps(decodedResponse ["data"]["abuseConfidenceScore"]) <= "20":
+    elif json.dumps(decodedResponse ["data"]["abuseConfidenceScore"]) <= "30":
         print ( "IP Adressen " + sys.argv[1] + " Er sannsynligvis ondsinnet og bør undersøkes nærmere")
     else:
-        print ( "[*] IP-omdømmeoppslag fullført!!!" + "\n" )
+        print ( "[*] IP-omdømmesøk fullført!!!" + "\n" )
 
-    print ( Fore.GREEN + "[*] IP-omdømmeoppslag fullført!!!" + "\n" )
+    print ( Fore.GREEN + "[*] IP-omdømmesøk fullført!!!" + "\n" )
